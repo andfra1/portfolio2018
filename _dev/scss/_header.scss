@@ -1,0 +1,98 @@
+$headerHeight: 75px;
+.header {
+  height: $headerHeight;
+  color: #5c7386;
+  z-index: 666;
+  background-color: $c-light;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid $c-dark;
+  &>.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding: 25px;
+    &Svg {
+      width: 100px;
+      height: 30px;
+    }
+  }
+  &__items {
+    display: flex;
+    height: 100%;
+    @include mq(600) {
+      position: absolute;
+      right: -100%;
+      display: block;
+      z-index: 1;
+      top: 100%;
+      background-color: #fff;
+      transition: right 0.3s;
+      &--show {
+        right: 0;
+        transition: right 0.3s;
+      }
+    }
+    &Box {
+      position: relative;
+      width: 115px;
+      overflow: hidden;
+      &Link {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center; //border-left: 1px solid $c-dark;
+        transition: all 0.3s;
+        text-align: center;
+        vertical-align: baseline;
+        &:before {
+          @include pseudoAbsolute;
+          content: attr(title);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: $fs-basic;
+          color: inherit;
+          transform: scale(1.5);
+          opacity: 0;
+          transition: opacity .4s,transform .4s;
+        }
+        @include mq(600) {
+          background-color: #fff;
+          border-bottom: 1px solid $c-dark;
+        }
+        &:hover {
+          font-size: 0;
+          color: $c-dark3; //background-color: $c-dark;
+          &:before {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+      }
+      &:before {
+        @include pseudoAbsolute;
+        width: 1px;
+        height: 10px;
+        background-color: $c-dark;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &:first-of-type:before {
+        content: none;
+      }
+    }
+  }
+}
+
+.underHeaderSpacer {
+  position: relative;
+  height: $headerHeight;
+}

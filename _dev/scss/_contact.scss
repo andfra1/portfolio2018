@@ -1,0 +1,12 @@
+#mail, #phone {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+#phone span {
+  margin-right: 5px;
+  &:first-child {
+    margin: 0;
+  }
+}

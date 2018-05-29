@@ -1,0 +1,87 @@
+::selection {
+  color: $c-light;
+  background: $c-basic;
+}
+
+h1,
+h2,
+h3,
+  {
+  color: inherit;
+  font-family: $ff-header;
+  font-weight: $fw-basic;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: $fs-h1;
+  color: $c-dark2;
+}
+
+h2 {
+  font-size:  $fs-h2;
+  color: $c-dark2;
+  margin-bottom: 35px;
+}
+
+h3 {
+  font-size:  $fs-h3;
+}
+
+p {
+  font-size: $fs-basic;
+  line-height: $lh-basic;
+  color: $c-dark2;
+  margin: $p-margin;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+
+.section,
+.footer,
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.section {
+  margin: $section-margin;
+  padding: $section-padding;
+}
+
+.wrapper {
+  position: relative;
+  max-width: $wrapper-width;
+  padding: $wrapper-padding;
+  margin: 0 auto;
+  font-family: $ff-basic;
+  font-weight: $fw-basic;
+  font-size: $fs-basic;
+  color: $fc-basic;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.closed {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+.opened {
+  max-height: 1000px;
+  overflow: none;
+  transition: max-height 0.5s;
+}
+
+.error {
+    border-bottom: 2px solid $c-warn !important;
+}
