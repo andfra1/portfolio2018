@@ -15,10 +15,8 @@ if (phone) {
 
 function addPhone() {
   phone.setAttribute("href", "tel:+48 " + number);
-  console.log(phone.getAttribute("href"));
 }
 
 function removePhone() {
   phone.setAttribute("href", "#");
-  console.log(phone.getAttribute("href"));
 }

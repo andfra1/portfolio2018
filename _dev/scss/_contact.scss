@@ -1,3 +1,11 @@
+.contact {
+  background-color: $c-dark;
+  
+  .wrapper, & * {
+    color: $c-aqua;
+  }
+}
+
 #mail, #phone {
   display: inline-flex;
   flex-direction: row-reverse;

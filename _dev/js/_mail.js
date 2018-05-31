@@ -17,10 +17,8 @@ if (mail) {
 
 function addMail() {
   mail.setAttribute("href", "mailto:" + address);
-  console.log(mail.getAttribute("href"));
 }
 
 function removeMail() {
   mail.setAttribute("href", "#");
-  console.log(mail.getAttribute("href"));
 }

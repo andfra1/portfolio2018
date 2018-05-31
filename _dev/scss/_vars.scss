@@ -7,7 +7,9 @@ $c-light2: #f5f5f5;
 $c-warn: rgb(255, 35, 35);
 $c-info: rgb(52, 83, 255);
 $c-neutral: rgb(0, 189, 0);
-$c-basic: #f5f5f5;
+$c-basic: #333;
+$c-border: #e0e0e0;
+$c-aqua: rgb(0, 255, 255);
 
 //globals
 //globals - fonts
@@ -21,12 +23,13 @@ $p-margin: 1rem 0;
 //globals - headers
 $ff-header: 'rubik';
 $fs-h1: $fs-basic*2;
+$h1-margin: 0 0 1rem 0;
 $fs-h2: $fs-basic*1.5;
 $fs-h3: $fs-basic*1.2;
 
 //globals - sections and wrappers
-$section-margin: 50px 0;
-$section-padding: 0;
+$section-margin: 0;
+$section-padding: 50px 0;
 
 $wrapper-width: 1200px;
 $wrapper-margin: 0;

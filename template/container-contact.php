@@ -11,6 +11,24 @@
       <a href="mailto:fandruszkiewicz@gmail.com" class="contact-list_item-mail">fandruszkiewicz[at]gmail.com</a>
     </li>
     <li class="contact-list_item">
+      
+    </li>
+  </ul>'
+  ];
+?>
+
+
+  <section class="section contact" id="contact">
+    <div class="wrapper">
+      <h1>
+        <?= $contact['title']?>
+      </h1>
+      <p>
+        <a href="#" id="mail"></a>
+      </p>
+      <p>
+        <a href="#" id="phone"></a>
+      </p>
       <figure class="qrcode">
         <figcaption class="qrcode_caption">Skanuj kod lub dotknij:</figcaption>
         <a href="data/andfra_vcard.vcf" download>
@@ -18,21 +36,5 @@
             alt="QR code" class="qrcode_img">
         </a>
       </figure>
-    </li>
-  </ul>'
-  ];
-?>
-
-
-<section class="section section1">
-  <div class="wrapper">
-    <h1>
-      <?= $contact['title']?>
-    </h1>
-    <p>
-      <?= $contact['text']?>
-    </p>
-    <a href="#" id="mail"></a>
-    <a href="#" id="phone"></a>
-  </div>
-</section>
+    </div>
+  </section>

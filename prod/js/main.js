@@ -45,26 +45,56 @@ if (mail) {
 
 function addMail() {
   mail.setAttribute("href", "mailto:" + address);
-  console.log(mail.getAttribute("href"));
 }
 
 function removeMail() {
   mail.setAttribute("href", "#");
-  console.log(mail.getAttribute("href"));
 }
-$('#slider').owlCarousel({
-  animateOut: 'slideOutUp',
-  animateIn: 'slideInUp',
-  center: true,
-  items: 3,
-  loop:true,
-  margin: 0,
-  autoplay: true,
-  autoplayTimeout: 5000,
-  autoplayHoverPause: true,
-  nav: false,
-  dots: false,
+$(document).ready(function () {
+  var ws = window.screen;
+  var width = matrix.width = ws.width;
+  var height = matrix.height = ws.height;
+  var yPositions = Array(300).join(0).split('');
+  var ctx = matrix.getContext('2d');
+  var i = 0;
+
+  var draw = function () {
+    ctx.fillStyle = 'rgba(0,0,0,.05)';
+    ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = 'rgb(0, 255, 255)';
+    ctx.font = '10pt rubik';
+    yPositions.map(function (y, index) {
+      //text = Math.floor(Math.random() * 2);
+      text = 'htmlcssjavascriptphpjquerygulpbootstrapwordpressjoomlacmsrwd';
+      text.split('');
+      text = text[Math.floor(Math.random() * text.length)];
+      x = (index * 10) + 10;
+      matrix.getContext('2d').fillText(text, x, y);
+      if (y > 100 + Math.random() * 40000) {
+        yPositions[index] = 0;
+      } else {
+        yPositions[index] = y + 12;
+      }
+    });
+  };
+  doEffect();
+
+  function doEffect() {
+    if (typeof si != "undefined") clearInterval(si);
+    si = setInterval(draw, 35);
+  }
 });
+// $('#portfolio').owlCarousel({
+//   center: true,
+//   items: 1,
+//   loop: true,
+//   margin: 0,
+//   autoplay: false,
+//   autoplayTimeout: 3000,
+//   autoplayHoverPause: false,
+//   nav: false,
+//   dots: false,
+// });
 var phone = document.getElementById("phone");
 var number = "886 552 562";
 var chopNumber = number.split(' ');
@@ -82,10 +112,43 @@ if (phone) {
 
 function addPhone() {
   phone.setAttribute("href", "tel:+48 " + number);
-  console.log(phone.getAttribute("href"));
 }
 
 function removePhone() {
   phone.setAttribute("href", "#");
-  console.log(phone.getAttribute("href"));
 }
+var slide = $('.slider__slide');
+var i = 0;
+
+$('#slider').height($('#projects').outerHeight() - 124 - $('#projects>.wrapper>h1').outerHeight(true));
+$(window).on('resize', function () {
+  $('#slider').height($('#projects').outerHeight() - 124 - $('#projects>.wrapper>h1').outerHeight(true));
+})
+
+$('#slider').click(function () {
+  if (i < slide.length - 1) {
+    slide.eq(i).addClass('slider__slide--rollup');
+    i++;
+    slide.eq(i).removeClass('slider__slide--rollup');
+  } else {
+    i = 0;
+    slide.removeClass('slider__slide--rollup')
+  }
+});
+
+var zIndex = $('.slider__slideContentText').length + 2;
+for (var index = 0; index < $('.slider__slideContentText').length; index++) {
+  zIndex--;
+  $('.slider__slideContentText').eq(index).css("z-index", zIndex);
+}
+
+var zIndex = $('.slider__slideContentImg').length;
+for (var index = 0; index < $('.slider__slideContentImg').length; index++) {
+  zIndex--;
+  $('.slider__slideContentImg').eq(index).css("z-index", zIndex);
+}
+$('.header__itemsBoxLink').click(function () {
+  $("html, body").animate({
+    scrollTop: $($(this).attr("href")).offset().top-75
+  }, 500);
+});

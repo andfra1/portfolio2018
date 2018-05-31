@@ -3,11 +3,11 @@
 <header class="header">
   <div class="wrapper">
     <div class="header__logo">
-      <div class="header__logoSvg">
+      
         <a href="<?= HTTP; ?>">
           <?= $header['logo']; ?>
         </a>
-      </div>
+      
     </div>
     <ul class="header__items">
       <?php foreach ( $header['menu'] as $key => $val) : ?>

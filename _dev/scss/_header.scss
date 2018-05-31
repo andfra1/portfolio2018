@@ -7,7 +7,7 @@ $headerHeight: 75px;
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid $c-dark;
+  border-bottom: 1px solid $c-border;
   &>.wrapper {
     height: 100%;
     display: flex;
@@ -16,10 +16,18 @@ $headerHeight: 75px;
   }
   &__logo {
     padding: 25px;
-    &Svg {
-      width: 100px;
-      height: 30px;
+    @include mq(600) {
+      padding-left: 0;
     }
+    & a {
+      color: $c-border;
+      &:hover {
+        color: $c-dark;
+      }
+      span {
+      color: $c-dark;
+    }
+  }
   }
   &__items {
     display: flex;
@@ -30,7 +38,7 @@ $headerHeight: 75px;
       display: block;
       z-index: 1;
       top: 100%;
-      background-color: #fff;
+      //background-color: #fff;
       transition: right 0.3s;
       &--show {
         right: 0;
@@ -41,6 +49,15 @@ $headerHeight: 75px;
       position: relative;
       width: 115px;
       overflow: hidden;
+      @include mq(600) {
+        background-color: #fff;
+        border-bottom: 1px solid  $c-border;
+        padding: 20px 0;
+        border-left: 1px solid  $c-border;
+        &:before {
+          content: none;
+        }
+      }
       &Link {
         display: flex;
         position: relative;
@@ -62,14 +79,16 @@ $headerHeight: 75px;
           transform: scale(1.5);
           opacity: 0;
           transition: opacity .4s,transform .4s;
-        }
-        @include mq(600) {
-          background-color: #fff;
-          border-bottom: 1px solid $c-dark;
+          @include mq(600) {
+            content: none;
+          }
         }
         &:hover {
           font-size: 0;
           color: $c-dark3; //background-color: $c-dark;
+          @include mq(600) {
+            font-size: 1rem;
+          }
           &:before {
             opacity: 1;
             transform: scale(1.1);
@@ -80,7 +99,7 @@ $headerHeight: 75px;
         @include pseudoAbsolute;
         width: 1px;
         height: 10px;
-        background-color: $c-dark;
+        background-color: $c-border;
         left: 0;
         top: 50%;
         transform: translate(0, -50%);

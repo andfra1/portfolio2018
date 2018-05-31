@@ -9,11 +9,11 @@ $pageBasicColor = '#000';
 //meta end
 
 $header = [
-  'logo' => 'andruszkiewicz<br>franciszek',
+  'logo' => '<span>and</span>ruszkiewicz<br><span>fra</span>nciszek',
   'menu' => [
-    'o mnie' => '#',
-    'projekty' => '#',
-    'kontakt' => '#'
+    'o mnie' => '#about',
+    'projekty' => '#projects',
+    'kontakt' => '#contact'
   ],
 ];
 

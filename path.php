@@ -11,6 +11,6 @@ $prod = '.min';
 
 //dev functions
 function dd($val) {
-  echo '<pre>';
+  echo '<pre style="font-size: 16px">';
   die(var_dump($val));
 }
