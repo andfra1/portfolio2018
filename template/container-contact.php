@@ -17,24 +17,27 @@
   ];
 ?>
 
-
   <section class="section contact" id="contact">
     <div class="wrapper">
-      <h1>
+      <h1 class="contact__header">
         <?= $contact['title']?>
       </h1>
-      <p>
-        <a href="#" id="mail"></a>
-      </p>
-      <p>
-        <a href="#" id="phone"></a>
-      </p>
-      <figure class="qrcode">
-        <figcaption class="qrcode_caption">Skanuj kod lub dotknij:</figcaption>
-        <a href="data/andfra_vcard.vcf" download>
-          <img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=BEGIN%3AVCARD%0AVERSION%3A2.1%0AFN%3AFranciszek+Andruszkiewicz%0AN%3AAndruszkiewicz%3BFranciszek%0ATEL%3BHOME%3BVOICE%3A%2B48886552562%0AEMAIL%3BHOME%3BINTERNET%3Afandruszkiewicz%40gmail.com%0AURL%3Ahttps%3A%2F%2Fandfra1.github.io%2F%0AEND%3AVCARD%0A&amp;qzone=1&amp;margin=0&amp;ecc=L"
-            alt="QR code" class="qrcode_img">
-        </a>
-      </figure>
+      <div class="contact__content">
+        <figure class="contact__contentQrcode">
+          <figcaption class="qrcode_caption">Skanuj kod lub dotknij:</figcaption>
+          <a href="data/andfra_vcard.vcf" download>
+            <img src="http://api.qrserver.com/v1/create-qr-code/?color=000000&amp;bgcolor=FFFFFF&amp;data=BEGIN%3AVCARD%0AVERSION%3A2.1%0AFN%3AFranciszek+Andruszkiewicz%0AN%3AAndruszkiewicz%3BFranciszek%0ATEL%3BHOME%3BVOICE%3A%2B48886552562%0AEMAIL%3BHOME%3BINTERNET%3Afandruszkiewicz%40gmail.com%0AURL%3Ahttps%3A%2F%2Fandfra1.github.io%2F%0AEND%3AVCARD%0A&amp;qzone=1&amp;margin=0&amp;ecc=L"
+              alt="QR code" class="qrcode_img">
+          </a>
+        </figure>
+        <div class="contact__contentData">
+          <p>
+            <a href="#" id="mail" class="mail"></a>
+          </p>
+          <p>
+            <a href="#" id="phone" class="phone"></a>
+          </p>
+        </div>
+      </div>
     </div>
   </section>

@@ -24,11 +24,11 @@
 <section class="section about" id="about">
 
   <div class="wrapper">
-    <h1>
+    <h1 class="about__header">
       <?= $about['title']?>
     </h1>
-    <p>
+    
       <?= $about['text']?>
-    </p>
+    
   </div>
 </section>

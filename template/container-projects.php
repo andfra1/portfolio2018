@@ -41,7 +41,7 @@
 
   <section class="section projects" id="projects">
     <div class="wrapper">
-      <h1>
+      <h1 class="projects__header">
         <?= $portfolio['title']?>
       </h1>
     </div>
