@@ -44,43 +44,43 @@
       <h1 class="projects__header">
         <?= $portfolio['title']?>
       </h1>
-    </div>
 
-    <div class="slider" id="slider">
+      <div class="slider" id="slider">
 
-      <?php foreach ($project as $name => $content) : ?>
-      <div class="slider__slide">
-        <div class="slider__slideContent">
-          <div class="slider__slideContentText">
-            <h2>
-              <?= $name; ?>
-                <?php if( !empty($content['subtext'])) : ?>
-                <small>
-                  <?= $content['subtext']?>
-                </small>
-                <?php endif; ?>
-            </h2>
-            <p>
-              <?= $content['text']['desc']; ?>
-            </p>
+        <?php foreach ($project as $name => $content) : ?>
+        <div class="slider__slide">
+          <div class="slider__slideContent">
+            <div class="slider__slideContentText">
+              <h2>
+                <?= $name; ?>
+                  <?php if( !empty($content['subtext'])) : ?>
+                  <small>
+                    <?= $content['subtext']?>
+                  </small>
+                  <?php endif; ?>
+              </h2>
+              <p>
+                <?= $content['text']['desc']; ?>
+              </p>
 
-            <ul>
-              <?php foreach ($content['text']['tools'] as $key) : ?>
-              <li data-tooltip="<?= $key; ?>">
-                <?= file_get_contents('img/svg/' . $key . '.svg'); ?>
-              </li>
-              <?php endforeach; ?>
-            </ul>
+              <ul>
+                <?php foreach ($content['text']['tools'] as $key) : ?>
+                <li data-tooltip="<?= $key; ?>">
+                  <?= file_get_contents('img/svg/' . $key . '.svg'); ?>
+                </li>
+                <?php endforeach; ?>
+              </ul>
 
-          </div>
-          <div class="slider__slideContentImg">
-            <img src="<?= $content['img']; ?>" alt="<?= $name; ?>">
+            </div>
+            <div class="slider__slideContentImg">
+              <img src="<?= $content['img']; ?>" alt="<?= $name; ?>">
+            </div>
           </div>
         </div>
-      </div>
 
-      <?php
+        <?php
         endforeach;
         ?>
+      </div>
     </div>
   </section>

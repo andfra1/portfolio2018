@@ -1261,6 +1261,8 @@ h2 > small
 .onScrollShow
 {
     transform: translate(0, 0) !important;
+
+    opacity: 1 !important;
 }
 
 p > a:before
@@ -1318,6 +1320,8 @@ p > a:hover:before
 
 .header__logo a
 {
+    transition: all .3s;
+
     color: rgba(0,150,255,.3);
 }
 
@@ -1326,8 +1330,15 @@ p > a:hover:before
     color: #333;
 }
 
+.header__logo a:hover > span
+{
+    color: rgba(0,150,255,.3);
+}
+
 .header__logo a span
 {
+    transition: all .3s;
+
     color: #333;
 }
 
@@ -1748,14 +1759,16 @@ p > a:hover:before
 {
     position: relative;
 
-    transition: transform .3s .3s;
+    transition: transform .3s .3s, opacity .3s .3s;
+
+    opacity: 0;
 }
 
 .contact__contentQrcode
 {
     padding-right: 30px;
 
-    transform: translate(-250%, 0);
+    transform: translate(-150%, 0);
 }
 
 .contact__contentQrcode > figcaption
@@ -1781,7 +1794,7 @@ p > a:hover:before
 {
     padding-left: 30px;
 
-    transform: translate(250%, 0);
+    transform: translate(150%, 0);
 
     border-left: 1px solid rgba(0,150,255,.3);
 }

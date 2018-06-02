@@ -21,11 +21,16 @@ $headerHeight: 75px;
     }
     & a {
       color: $c-border;
+      transition: all 0.3s;
       &:hover {
         color: $c-dark2;
+        & > span {
+          color: $c-border;
+        }
       }
       span {
         color: $c-dark2;
+        transition: all 0.3s;
       }
     }
   }

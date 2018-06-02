@@ -18,11 +18,12 @@
     min-height: 100%;
     &>* {
       position: relative;
-      transition: transform .3s 0.3s;
+      opacity: 0;
+      transition: transform .3s 0.3s, opacity 0.3s .3s;
     }
     &Qrcode {
       padding-right: 30px;
-      transform: translate(-250%, 0);
+      transform: translate(-150%, 0);
       &>figcaption {
         text-align: center;
       }
@@ -39,7 +40,7 @@
     &Data {
       padding-left: 30px;
       border-left: 1px solid $c-border;
-      transform: translate(250%, 0);
+      transform: translate(150%, 0);
     }
   }
 }
