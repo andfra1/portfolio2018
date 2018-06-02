@@ -41,6 +41,57 @@
   & * {
     //color: $c-light;
   }
+  &__p {
+    position: relative;
+    &>span {
+      position: relative;
+      display: inline-block;
+      transition: all 0.5s;
+    }
+  }
+  &__skills {
+    position: relative;
+    &Icons {
+      &Svg {
+        overflow: hidden;
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        &>svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          transition: all 0.3s;
+          &:last-child {
+            top: 100%;
+          }
+        }
+        &:hover {
+          & .about__skillsContent {
+            display: block;
+          }
+          &>svg:first-child {
+            top: -100%;
+          }
+          &>svg:last-child {
+            top: 0;
+          }
+        }
+      }
+    }
+    &Content {
+      position: absolute;
+      top: 30px;
+      left: 0;
+      padding: 20px;
+      display: none;
+    }
+  }
 }
 
 .hvr-buzz-out {

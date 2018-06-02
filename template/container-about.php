@@ -1,34 +1,93 @@
 <?php
   $about = [
     'title' => 'o mnie',
-    'text' => '<p>
-    Nazywam się
-    <strong>Franciszek Andruszkiewicz</strong> i jestem front-end developerem. Od sierpnia 2017 rozpocząłem staż w firmie
-    <a href="http://www.solmedia.pl/" rel="nofollow">SOLMedia</a>, a od października 2017 roku zająłem stanowisko web-developera w firmie
-    <a href="https://crafton.pl/" rel="nofollow">Crafton</a>.
-  </p>
-  <p>
-    Jestem zainteresowany współpracą przy tworzeniu stron internetowych lub pracę w pełnym wymiarze godzin (UoP, UZ). W zakładce <a href="#" id="portfolio-link">portfolio</a> można obejrzeć projekty w pełni wykonane przeze mnie.
-  </p>
-  <p>
-      <a href="./cv/">Link do CV</a>
-    </p>'
-  ];
+    'text' => '
+    <p class="about__p">
+    Nazywam się Franciszek Andruszkiewicz i jestem front-end developerem. Przez prawie rok pracowałem nad zmianą branży, w która da mi spełnienie i satysfakcję z wykonywanych zadań. Przez kolejny rok nabierałem doświadczenia jako junior front-end developer w firmie SOLMedia, a następnie dostałem duży zastrzyk wiedzy oraz sposób realizacji projektów w firmie Crafton.
+    </p>
+    <p class="about__p">
+    Obecnie wiem, że chciałbym zagłębić również temat PHP i SQL, żeby móc samodzielnie działać po stronie back-end. Następnie Angular lub React, dzięki którym będę mógł realizować PWA.
+    </p>',
+    'others' => '
+    <p><a href="./cv/">Link do CV</a></a></p>
+    <p>Z czego korzystam na codzień:</p>
+    ',
+    'skills' => [
+      'html' => [
+        'Standard HTML5',
+        'Semantyka (SEO-friendly)',
+        'Responsive Web Design (RWD)',
+        'Mobile-first / Desktop-first'
+      ],
+      'sass' => [
+        'Przyspieszenie pracy',
+        'Doskonały przy wykorzystaniu BEM'
+      ],
+      'javascript' => [
+        'ES5 i ES6',
+        'poziom średni'
+      ],
+      'jquery' => [
+        'Przyspieszenie pracy',
+        'Poziom średni'
+      ],
+      'php' => [
+        'Dzielnie stawiam pierwsze kroki :)'
+      ],
+      'github' => [
+        'git commit, git push',
+        'Obsługa tylko z pozycji konsoli'
+      ],
+      'gulp' => [
+        'Żeby życie było łatwiejsze :)'
+      ],
+      'wordpress' => [
+        'W większości wykorzystywany z ACF'
+      ],
+      'joomla' => [
+        'Do tej pory wykonałem w nim proste projekty widoczne w portfolio'
+      ],
+      'bootstrap' => [
+        'Korzystam gdy jest taka potrzeba'
+      ]
+    ]
+  ]
+  
 ?>
 
-<section class="section matrix">
-<div class="matrixDimmer"></div>
-<canvas id="matrix" width="100%" height="100%"></canvas>
-</section>
+  <section class="section about" id="about">
 
-<section class="section about" id="about">
+    <div class="wrapper">
+      <h1 class="about__header">
+        <?= $about['title']?>
+      </h1>
 
-  <div class="wrapper">
-    <h1 class="about__header">
-      <?= $about['title']?>
-    </h1>
-    
-      <?= $about['text']?>
-    
-  </div>
-</section>
+      <div class="about__content">
+        <?= $about['text']?>
+      </div>
+
+      <?= $about['others']?>
+
+        <div class="about__skills">
+          <div class="about__skillsIcons">
+            <?php foreach($about['skills'] as $icon => $desc) : ?>
+            <div class="about__skillsIconsSvg">
+              <?= file_get_contents('img/svg/' . $icon . '.svg'); ?>
+                <?= file_get_contents('img/svg/svg-color/' . $icon . '.svg'); ?>
+            </div>
+            <?php endforeach;?>
+          </div>
+          <?php foreach($about['skills'] as $icon => $desc) : ?>
+          <div class="about__skillsContent">
+            <ul>
+              <?php foreach($desc as $list) : ?>
+              <li>
+                <?= $list; ?>
+              </li>
+              <?php endforeach;?>
+            </ul>
+          </div>
+          <?php endforeach;?>
+        </div>
+    </div>
+  </section>

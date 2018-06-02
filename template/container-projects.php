@@ -2,36 +2,104 @@
  $portfolio = [
   'title' => 'projekty',
   'project' => [
-    'wsm' => [
+    'netvariant' => [
+      'subtext' => '(demo)',
       'text' => [
-        'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sequi, nisi veritatis vel vitae, nulla culpa laudantium obcaecati necessitatibus ipsam delectus eum velit labore similique quo aliquid aliquam! Nesciunt, sapiente.',
+        'desc' => 'Front-end wykonany na podstawie PSD. Animacje i zachowanie - inwencja własna.',
         'tools' => [
-          'html', 'sass', 'jquery', 'wordpress', 'joomla', 'bootstrap', 'php', 'rwd'
+          'html', 'sass', 'javascript', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/netvariant.jpg',
+      'link' => './netvariant'
+    ],
+    'Gastro polerki' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Strona wykonana od podstaw (pusty szablon) w WordPress na podstawie PSD. Zachowanie i wygląd - zgodnie z zaleceniami klienta',
+        'tools' => [
+          'html', 'sass', 'jquery', 'wordpress', 'php', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/hendi.jpg',
+      'link' => 'https://hendi.beta.crafton.pl/_cms/'
+    ],
+    'WSM' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Strona wykonana od podstaw dla klienta zajmującego się fotografią i filmowaniem eventów. Wykonanie w oparciu o ustalenia z klientem.',
+        'tools' => [
+          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
         ]
       ],
       'img' => 'img/portfolio/wsm.jpg',
-      'link' => '#'
+      'link' => 'http://wsm-digital.pl/'
     ],
     'teja' => [
       'subtext' => '(komercyjnie)',
       'text' => [
-        'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sequi, nisi veritatis vel vitae, nulla culpa laudantium obcaecati necessitatibus ipsam delectus eum velit labore similique quo aliquid aliquam! Nesciunt, sapiente.',
+        'desc' => 'Witryna architektki wnętrz. Wykonano od podstaw (pusty szablon) w Joomla!',
         'tools' => [
-          'html', 'sass', 'jquery', 'wordpress', 'joomla', 'bootstrap', 'php', 'rwd'
+          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
         ]
       ],
       'img' => 'img/portfolio/teja.jpg',
-      'link' => '#'
+      'link' => 'http://tejadesign.pl/'
     ],
-    'bodie' => [
+    'BlingBlingGarage' => [
+      'subtext' => '(komercyjnie)',
       'text' => [
-        'desc' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui sequi, nisi veritatis vel vitae, nulla culpa laudantium obcaecati necessitatibus ipsam delectus eum velit labore similique quo aliquid aliquam! Nesciunt, sapiente.',
+        'desc' => 'Bling Bling Garage - studio detailingowe specjalizujące się w motocyklach. Wtryna wykonana od podstaw (pusty szablon) w Joomla',
         'tools' => [
-          'html', 'sass', 'jquery', 'wordpress', 'joomla', 'bootstrap', 'php', 'rwd'
+          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
         ]
       ],
-      'img' => 'img/portfolio/bodie.png',
-      'link' => '#'
+      'img' => 'img/portfolio/bling.jpg',
+      'link' => 'http://www.blingblinggarage.pl/'
+    ],
+    'Misja team' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Wtryna wykonana od podstaw (pusty szablon) w Joomla',
+        'tools' => [
+          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/misja.jpg',
+      'link' => 'https://www.m-team-biurorachunkowe.pl/'
+    ],
+    'bodie' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Strona firmy zajmującej się szkoleniami i konferencjami bazująca na przerobionmy szablonie w WordPress zgodnie z zaleceniami klienta.',
+        'tools' => [
+          'html', 'sass', 'jquery', 'wordpress', 'php', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/bodie.jpg',
+      'link' => 'http://bodie.beta.crafton.pl/'
+    ],
+    'hair salon' => [
+      'subtext' => '(demo)',
+      'text' => [
+        'desc' => 'Jeden ze starszych projektów wykonanych na podstawie PSD',
+        'tools' => [
+          'html', 'sass', 'javascript', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/hair.jpg',
+      'link' => './hairsalon/index.html'
+    ],
+    'Blog1' => [
+      'subtext' => '(demo)',
+      'text' => [
+        'desc' => 'Jeden z pierwszych projektów bazujący na serwisie znanego youtubera <a href="https://jarock.pl/" rel="nofollow">jarock.pl</a>',
+        'tools' => [
+          'html', 'sass', 'javascript', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/blog1.jpg',
+      'link' => './blog1/index.html'
     ]
   ]
  ];
@@ -73,6 +141,7 @@
 
             </div>
             <div class="slider__slideContentImg">
+            <div class="slider__slideContentImgBg"></div>
               <img src="<?= $content['img']; ?>" alt="<?= $name; ?>">
             </div>
           </div>

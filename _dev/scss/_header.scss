@@ -15,7 +15,7 @@ $headerHeight: 75px;
     justify-content: space-between;
   }
   &__logo {
-    padding: 25px;
+    padding: 0 30px;
     @include mq(600) {
       padding-left: 0;
     }

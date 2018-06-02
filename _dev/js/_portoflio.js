@@ -9,9 +9,8 @@ $(window).on('resize', function () {
 
 $('#slider').click(function () {
   if (i < slide.length - 1) {
-    slide.eq(i).addClass('slider__slide--rollup');
-    i++;
-    slide.eq(i).removeClass('slider__slide--rollup');
+    slide.eq(i++).addClass('slider__slide--rollup');
+    //slide.eq(i).removeClass('slider__slide--rollup');
   } else {
     i = 0;
     slide.removeClass('slider__slide--rollup')

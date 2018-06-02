@@ -13,17 +13,41 @@
   }
   &__content {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     min-height: 100%;
-    &>* {
+    &Side {
+      display: flex;
+      align-items: center;
+      flex: 1;
       position: relative;
-      opacity: 0;
-      transition: transform .3s 0.3s, opacity 0.3s .3s;
+      background-color: $c-light;
+      overflow: hidden;
+      &:first-child {
+        justify-content: flex-end;
+      }
+      &:last-child {
+        justify-content: flex-start;
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          height: 90px;
+          width: 1px;
+          background-color: $c-border;
+        }
+      }
+      &>* {
+        transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
+        opacity: 0;
+      }
     }
     &Qrcode {
       padding-right: 30px;
-      transform: translate(-150%, 0);
+      transform: translate(100%, 0);
       &>figcaption {
         text-align: center;
       }
@@ -39,8 +63,14 @@
     }
     &Data {
       padding-left: 30px;
-      border-left: 1px solid $c-border;
-      transform: translate(150%, 0);
+      transform: translate(-100%, 0);
+      &Svg {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
     }
   }
 }

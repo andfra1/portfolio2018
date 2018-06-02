@@ -38,7 +38,7 @@ $footer = [
     'left' => 'Created with &#x2661; in 2018',
     'right' => [
       './img/svg/codepen-logo.svg' => 'https://codepen.io/andfra1/',
-      './img/svg/github-logo.svg' => 'https://github.com/andfra1',
+      './img/svg/github.svg' => 'https://github.com/andfra1',
       './img/svg/stackoverflow-logo.svg' => 'https://stackoverflow.com/users/3213002/andfra'
     ]
   ]

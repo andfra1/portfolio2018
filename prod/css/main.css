@@ -1226,69 +1226,6 @@ p
     content: '';
 }
 
-.closed
-{
-    overflow: hidden;
-
-    max-height: 0;
-
-    transition: max-height .5s;
-}
-
-.opened
-{
-    overflow: none;
-
-    max-height: 1000px;
-
-    transition: max-height .5s;
-}
-
-.error
-{
-    border-bottom: 2px solid #ff2323 !important;
-}
-
-h2 > small
-{
-    font-size: .8rem;
-
-    display: block;
-
-    margin: 5px 0;
-}
-
-.onScrollShow
-{
-    transform: translate(0, 0) !important;
-
-    opacity: 1 !important;
-}
-
-p > a:before
-{
-    position: absolute;
-    top: 100%;
-    left: 100%;
-
-    display: block;
-
-    width: 0;
-    height: 1px;
-
-    content: '';
-    transition: width .3s, left .3s;
-
-    background-color: rgba(0,150,255,.3);
-}
-
-p > a:hover:before
-{
-    left: 50%;
-
-    width: 50%;
-}
-
 .header
 {
     position: fixed;
@@ -1315,7 +1252,7 @@ p > a:hover:before
 
 .header__logo
 {
-    padding: 25px;
+    padding: 0 30px;
 }
 
 .header__logo a
@@ -1515,6 +1452,82 @@ p > a:hover:before
 
     content: '_';
     animation: blinking 1s linear infinite;
+}
+
+.about__p
+{
+    position: relative;
+}
+
+.about__p > span
+{
+    position: relative;
+
+    display: inline-block;
+
+    transition: all .5s;
+}
+
+.about__skills
+{
+    position: relative;
+}
+
+.about__skillsIconsSvg
+{
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+
+    cursor: pointer;
+}
+
+.about__skillsIconsSvg > svg
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    transition: all .3s;
+}
+
+.about__skillsIconsSvg > svg:last-child
+{
+    top: 100%;
+}
+
+.about__skillsIconsSvg:hover .about__skillsContent
+{
+    display: block;
+}
+
+.about__skillsIconsSvg:hover > svg:first-child
+{
+    top: -100%;
+}
+
+.about__skillsIconsSvg:hover > svg:last-child
+{
+    top: 0;
+}
+
+.about__skillsContent
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+
+    display: none;
+
+    padding: 20px;
 }
 
 .hvr-buzz-out
@@ -1751,14 +1764,52 @@ p > a:hover:before
 
     min-height: 100%;
 
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 }
 
-.contact__content > *
+.contact__contentSide
 {
     position: relative;
 
+    display: flex;
+    overflow: hidden;
+
+    background-color: #fff;
+
+    align-items: center;
+    flex: 1;
+}
+
+.contact__contentSide:first-child
+{
+    justify-content: flex-end;
+}
+
+.contact__contentSide:last-child
+{
+    justify-content: flex-start;
+}
+
+.contact__contentSide:last-child:before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 1px;
+    height: 90px;
+
+    content: '';
+    transform: translate(0, -50%);
+
+    background-color: rgba(0,150,255,.3);
+}
+
+.contact__contentSide > *
+{
     transition: transform .3s .3s, opacity .3s .3s;
 
     opacity: 0;
@@ -1768,7 +1819,7 @@ p > a:hover:before
 {
     padding-right: 30px;
 
-    transform: translate(-150%, 0);
+    transform: translate(100%, 0);
 }
 
 .contact__contentQrcode > figcaption
@@ -1794,9 +1845,18 @@ p > a:hover:before
 {
     padding-left: 30px;
 
-    transform: translate(150%, 0);
+    transform: translate(-100%, 0);
+}
 
-    border-left: 1px solid rgba(0,150,255,.3);
+.contact__contentDataSvg
+{
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    vertical-align: middle;
 }
 
 #mail,
@@ -2097,6 +2157,75 @@ p > a:hover:before
 .bounceInUp
 {
     animation: bounceInUp 1s;
+}
+
+.closed
+{
+    overflow: hidden;
+
+    max-height: 0;
+
+    transition: max-height .5s;
+}
+
+.opened
+{
+    overflow: none;
+
+    max-height: 1000px;
+
+    transition: max-height .5s;
+}
+
+.error
+{
+    border-bottom: 2px solid #ff2323 !important;
+}
+
+h2 > small
+{
+    font-size: .8rem;
+
+    display: block;
+
+    margin: 5px 0;
+}
+
+.onScrollShow
+{
+    transform: translate(0, 0) !important;
+
+    opacity: 1 !important;
+}
+
+p > a:before
+{
+    position: absolute;
+    top: 100%;
+    left: 100%;
+
+    display: block;
+
+    width: 0;
+    height: 1px;
+
+    content: '';
+    transition: width .3s, left .3s;
+
+    background-color: rgba(0,150,255,.3);
+}
+
+p > a:hover:before
+{
+    left: 50%;
+
+    width: 50%;
+}
+
+.fixed
+{
+    position: fixed;
+    left: 0;
 }
 
 @media (max-width: 980px)
