@@ -58,7 +58,7 @@
   <section class="section about" id="about">
 
     <div class="wrapper">
-      <h1 class="about__header">
+      <h1 class="about__header" data-before="&gt;" data-after="_">
         <?= $about['title']?>
       </h1>
 

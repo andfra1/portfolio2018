@@ -13,17 +13,6 @@
       'img' => 'img/portfolio/netvariant.jpg',
       'link' => './netvariant'
     ],
-    'Gastro polerki' => [
-      'subtext' => '(komercyjnie)',
-      'text' => [
-        'desc' => 'Strona wykonana od podstaw (pusty szablon) w WordPress na podstawie PSD. Zachowanie i wygląd - zgodnie z zaleceniami klienta',
-        'tools' => [
-          'html', 'sass', 'jquery', 'wordpress', 'php', 'rwd'
-        ]
-      ],
-      'img' => 'img/portfolio/hendi.jpg',
-      'link' => 'https://hendi.beta.crafton.pl/_cms/'
-    ],
     'WSM' => [
       'subtext' => '(komercyjnie)',
       'text' => [
@@ -34,6 +23,17 @@
       ],
       'img' => 'img/portfolio/wsm.jpg',
       'link' => 'http://wsm-digital.pl/'
+    ],
+    'Bling Bling Garage' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Bling Bling Garage - studio detailingowe specjalizujące się w motocyklach. Wtryna wykonana od podstaw (pusty szablon) w Joomla',
+        'tools' => [
+          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/bling.jpg',
+      'link' => 'http://www.blingblinggarage.pl/'
     ],
     'teja' => [
       'subtext' => '(komercyjnie)',
@@ -46,17 +46,6 @@
       'img' => 'img/portfolio/teja.jpg',
       'link' => 'http://tejadesign.pl/'
     ],
-    'BlingBlingGarage' => [
-      'subtext' => '(komercyjnie)',
-      'text' => [
-        'desc' => 'Bling Bling Garage - studio detailingowe specjalizujące się w motocyklach. Wtryna wykonana od podstaw (pusty szablon) w Joomla',
-        'tools' => [
-          'html', 'sass', 'jquery', 'joomla', 'bootstrap', 'php', 'rwd'
-        ]
-      ],
-      'img' => 'img/portfolio/bling.jpg',
-      'link' => 'http://www.blingblinggarage.pl/'
-    ],
     'Misja team' => [
       'subtext' => '(komercyjnie)',
       'text' => [
@@ -67,6 +56,17 @@
       ],
       'img' => 'img/portfolio/misja.jpg',
       'link' => 'https://www.m-team-biurorachunkowe.pl/'
+    ],
+    'Gastro polerki' => [
+      'subtext' => '(komercyjnie)',
+      'text' => [
+        'desc' => 'Strona wykonana od podstaw (pusty szablon) w WordPress na podstawie PSD. Zachowanie i wygląd - zgodnie z zaleceniami klienta',
+        'tools' => [
+          'html', 'sass', 'jquery', 'wordpress', 'php', 'rwd'
+        ]
+      ],
+      'img' => 'img/portfolio/hendi.jpg',
+      'link' => 'https://hendi.beta.crafton.pl/_cms/'
     ],
     'bodie' => [
       'subtext' => '(komercyjnie)',
@@ -141,7 +141,11 @@
 
             </div>
             <div class="slider__slideContentImg">
-            <div class="slider__slideContentImgBg"></div>
+            <div class="slider__slideContentImgBg">
+              <a href="<?= $content['link']; ?>" target="_blank" ref="nofollow">
+                <?= file_get_contents('img/svg/external.svg'); ?>
+              </a>
+            </div>
               <img src="<?= $content['img']; ?>" alt="<?= $name; ?>">
             </div>
           </div>

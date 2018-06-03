@@ -24,7 +24,7 @@ $headerHeight: 75px;
       transition: all 0.3s;
       &:hover {
         color: $c-dark2;
-        & > span {
+        &>span {
           color: $c-border;
         }
       }
@@ -42,7 +42,7 @@ $headerHeight: 75px;
       right: -100%;
       display: block;
       z-index: 1;
-      top: 100%; //background-color: #fff;
+      top: 100%;
       transition: right 0.3s;
       &--show {
         right: 0;
@@ -68,7 +68,7 @@ $headerHeight: 75px;
         height: 100%;
         width: 100%;
         align-items: center;
-        justify-content: center; //border-left: 1px solid $c-dark;
+        justify-content: center;
         transition: all 0.3s;
         text-align: center;
         vertical-align: baseline;
@@ -102,6 +102,10 @@ $headerHeight: 75px;
             opacity: 1;
             transform: scale(1.1);
           }
+        }
+        &>span {
+          position: relative;
+          display: inline-block;
         }
       }
       &:before {

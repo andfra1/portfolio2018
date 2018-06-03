@@ -8,16 +8,15 @@ $(window).on('resize', function () {
 })
 
 $('#slider').click(function () {
-  if (i < slide.length - 1) {
+  if (i < slide.length-1) {
     slide.eq(i++).addClass('slider__slide--rollup');
-    //slide.eq(i).removeClass('slider__slide--rollup');
   } else {
     i = 0;
     slide.removeClass('slider__slide--rollup')
   }
 });
 
-var zIndex = $('.slider__slideContentText').length + 2;
+var zIndex = $('.slider__slideContentText').length*2;
 for (var index = 0; index < $('.slider__slideContentText').length; index++) {
   zIndex--;
   $('.slider__slideContentText').eq(index).css("z-index", zIndex);

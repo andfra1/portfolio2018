@@ -59,17 +59,40 @@ $(window).scroll(function () {
   }
 
   //letters fall
-  for (var el = 0; el < aboutp.length; el++) {
-    var aboutpChildLen = aboutp[el].childNodes.length;
-    var rand = Math.random();
-    var randChild = Math.floor(rand * aboutpChildLen);
-    if (fromTop > $('#about').offset().top && fromTop <= $('#about').offset().top + wh/2) {
-      aboutp[el].childNodes[randChild].style = 'transform:translateY(' + fromTop + 'px); opacity:' + rand;
-    } else if (fromTop <= $('#about').offset().top + 50) {
-      for (var all = 0; all < aboutpChildLen; all++) {
-        aboutp[el].childNodes[all].style = '';
+  // for (var el = 0; el < aboutp.length; el++) {
+  //   var aboutpChildLen = aboutp[el].childNodes.length;
+  //   var rand = Math.random();
+  //   var randChild = Math.floor(rand * aboutpChildLen);
+  //   if (fromTop > $('#about').offset().top && fromTop <= $('#about').offset().top + wh / 2) {
+  //     aboutp[el].childNodes[randChild].style = 'transform:translateY(' + fromTop + 'px); opacity:' + rand;
+  //   } else if (fromTop <= $('#about').offset().top + 50) {
+  //     for (var all = 0; all < aboutpChildLen; all++) {
+  //       aboutp[el].childNodes[all].style = '';
+  //     }
+  //   }
+  // }
+
+
+  var rand = Math.random();
+
+  for (var d = 0; d < aboutp.length; d++) {
+    var aboutpEl = aboutp[d].childNodes; //wyrazy
+    
+    for (var f = 0; f < aboutpEl.length; f++) {
+      var aboutpChLen = aboutpEl[f].childNodes.length; //litery
+      var randChild = Math.floor(rand * aboutpChLen)%5==0?Math.floor(rand * aboutpChLen):0;
+      //var randChild = mathRand(rand * aboutpChLen);
+      if (fromTop > $('#about').offset().top && fromTop <= $('#about').offset().top + wh / 2) {
+        aboutpEl[f].childNodes[randChild].style = 'transform:translateY(' + fromTop + 'px); opacity:' + Math.random();
       }
+      else if (fromTop <= $('#about').offset().top + 50) {
+        for (var g = 0; g < aboutpChLen; g++) {
+        aboutpEl[f].childNodes[g].style = '';
+        }
+      }
+
     }
+
   }
 
 })

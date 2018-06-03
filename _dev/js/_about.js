@@ -11,9 +11,9 @@ for (var i = 0; i < aboutp.length; i++) {
     span.push('<span>' + split[j] + '</span>'); //dodaj span do liter
     }
     else {
-      span.push('<span>&nbsp;</span>');
+      span.push('</span><span>&nbsp;</span><span>');
     }
   }
-  arr.push(span.join('')); //dodaj do tablicy
+  arr.push('<span>'+span.join('')+'</span>'); //dodaj do tablicy
   aboutp[i].innerHTML = arr[i];
 }
