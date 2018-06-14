@@ -3,10 +3,10 @@
     'title' => 'o mnie',
     'text' => '
     <p class="about__p">
-    Nazywam się Franciszek Andruszkiewicz i jestem front-end developerem. Przez prawie rok pracowałem nad zmianą branży, w która da mi spełnienie i satysfakcję z wykonywanych zadań. Przez kolejny rok nabierałem doświadczenia jako junior front-end developer w firmie SOLMedia, a następnie dostałem duży zastrzyk wiedzy oraz sposób realizacji projektów w firmie Crafton.
+    Nazywam się Franciszek Andruszkiewicz i jestem front-end developerem. Przez prawie rok pracowałem nad zmianą branży, w która da mi spełnienie i satysfakcję z wykonywanych zadań. Przez kolejny rok nabierałem doświadczenia jako junior front-end developer w firmie SOLMedia, a następnie dostałem duży zastrzyk wiedzy i doświadczenia w firmie Crafton.
     </p>
     <p class="about__p">
-    Obecnie wiem, że chciałbym zagłębić również temat PHP i SQL, żeby móc samodzielnie działać po stronie back-end. Następnie Angular lub React, dzięki którym będę mógł realizować PWA.
+    Obecnie wiem, że chciałbym zagłębić również temat PHP i SQL, żeby móc samodzielnie działać po stronie back-end. Następnie Angular lub React.
     </p>',
     'others' => '
     <p><a href="./cv/">Link do CV</a></a></p>
@@ -14,8 +14,7 @@
     ',
     'skills' => [
       'html' => [
-        'Standard HTML5',
-        'Semantyka (SEO-friendly)',
+        'Standard HTML5 z zachowaniem semantyki',
         'Responsive Web Design (RWD)',
         'Mobile-first / Desktop-first'
       ],

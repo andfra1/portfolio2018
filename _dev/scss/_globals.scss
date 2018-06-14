@@ -23,11 +23,17 @@ h1 {
   font-size: $fs-h1;
   color: $c-dark2;
   margin: $h1-margin;
+  @include mq(600) {
+    font-size: $fs-basic*1.5;
+  }
 }
 
 h2 {
   font-size: $fs-h2;
   color: $c-dark2;
+  @include mq(600) {
+    font-size: $fs-basic*1.2;
+  }
 }
 
 h3 {
@@ -52,13 +58,20 @@ p {
   width: 100%;
   position: relative;
   z-index: 0;
-  overflow: hidden;
 }
 
 .section {
   min-height: calc(100% - 75px);
+  max-height: 720px;
   margin: $section-margin;
   padding: $section-padding;
+  @include mq(600) {
+    padding: 25px 0;
+  }
+}
+
+.section, .footer {
+  overflow: hidden;
 }
 
 .wrapper {

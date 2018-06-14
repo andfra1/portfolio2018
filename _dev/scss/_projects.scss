@@ -3,6 +3,13 @@
   &__header {
     transform: translate(-120%, 0);
     transition: transform 0.3s;
+    &>span {
+      font-size: $fs-basic/2;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      cursor: pointer;
+    }
   }
 }
 
@@ -18,22 +25,38 @@
     left: 0;
     width: 100%;
     height: 100%;
+    @include mq(600) {
+      min-height: 100%;
+      opacity: 1;
+      transition: all 0.3s;
+    }
     &--rollup {
       .slider__slideContentText,
-      .slider__slideContentImg {}
       .slider__slideContentImg {
         right: 50%;
-        z-index: 2;
+        @include mq(600) {
+          right: auto;
+          left: 100%;
+          opacity: 0;
+          transition: all 0.3s;
+        }
       }
       .slider__slideContentText {
         right: 100%;
         z-index: 2;
+        @include mq(600) {
+          right: auto;
+          left: 100%;
+        }
       }
     }
     &Content {
       position: relative;
       width: calc(100% + 1px);
       height: 100%;
+      @include mq(600) {
+        position: static;
+      }
       &>* {
         width: 50%;
         height: 100%;
@@ -43,25 +66,24 @@
         transition: right 0.6s, transform 0.3s;
         transform: translate(0, 100%);
         border-right: 1px solid $c-border;
+        @include mq(600) {
+          width: 100%;
+          height: 50%;
+          left: 0;
+          border: 0;
+        }
       }
       &Img {
         right: 0;
         z-index: 2;
         transition: right 0.6s, transform 0.3s 0.3s;
+        @include mq(600) {
+          top: 0;
+          transform: translate(0, 0) !important;
+        }
         &:hover {
           .slider__slideContentImgBg {
-            opacity: 1;
-            // &:after {
-            //   content: '';
-            //   position: absolute;
-            //   display: block;
-            //   top: 30px;
-            //   left: 30px;
-            //   right: 30px;
-            //   bottom: 30px;
-            //   //transform: translate(-50%, -50%);
-            //   border: 1px solid $c-light;
-            // }
+            opacity: 1
           }
           img {
             height: 110%;
@@ -89,11 +111,11 @@
           transition: opacity 0.3s;
           &>a {
             position: absolute;
-            bottom: 15px;
-            left: 15px;
-            width: 32px;
-            height: 32px;
+            @include center;
+            width: 45px;
+            height: 45px;
             display: block;
+            fill: $c-light;
           }
         }
       }
@@ -106,6 +128,12 @@
         padding: 30px;
         display: flex;
         flex-direction: column;
+        @include mq(600) {
+          top: 50%;
+          display: block;
+          height: 100%;
+          transform: translate(0, 0) !important;
+        }
         p {
           flex: 1;
         }

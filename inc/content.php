@@ -35,7 +35,7 @@ $footer = [
   //   Voluptatum debitis est alias nobis odio, pariatur dolorem voluptatem ea reprehenderit quis eum labore!',
   // ],
   'bottom' => [
-    'left' => 'Created with &#x2661; in 2018',
+    'left' => '2018, Beta ver.',
     'right' => [
       './img/svg/codepen-logo.svg' => 'https://codepen.io/andfra1/',
       './img/svg/github.svg' => 'https://github.com/andfra1',

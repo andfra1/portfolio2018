@@ -16,6 +16,10 @@
     align-items: stretch;
     justify-content: center;
     min-height: 100%;
+    @include mq(600) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
     &Side {
       display: flex;
       align-items: center;
@@ -23,8 +27,14 @@
       position: relative;
       background-color: $c-light;
       overflow: hidden;
+      @include mq(600) {
+        flex: 0;
+      }
       &:first-child {
         justify-content: flex-end;
+        @include mq(600) {
+          margin-top: 30px;
+        }
       }
       &:last-child {
         justify-content: flex-start;
@@ -39,6 +49,11 @@
           width: 1px;
           background-color: $c-border;
         }
+        @include mq(600) {
+          &:before {
+            content: none;
+          }
+        }
       }
       &>* {
         transition: transform 0.3s 0.3s, opacity 0.3s 0.3s;
@@ -48,6 +63,9 @@
     &Qrcode {
       padding-right: 30px;
       transform: translate(100%, 0);
+      @include mq(600) {
+        padding: 0;
+      }
       &>figcaption {
         text-align: center;
       }
@@ -64,6 +82,10 @@
     &Data {
       padding-left: 30px;
       transform: translate(-100%, 0);
+      @include mq(600) {
+        padding: 0;
+        text-align: center;
+      }
       &Svg {
         width: 20px;
         height: 20px;

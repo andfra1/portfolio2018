@@ -111,6 +111,7 @@
     <div class="wrapper">
       <h1 class="projects__header">
         <?= $portfolio['title']?>
+        <span id="nextProject">next &gt;</span>
       </h1>
 
       <div class="slider" id="slider">
