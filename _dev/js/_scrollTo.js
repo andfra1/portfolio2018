@@ -9,7 +9,7 @@ $('.header__itemsBoxLink').click(function () {
 $(window).on('scroll load resize', function () {
   var fromTop = $(this).scrollTop();
   var wh = $(this).innerHeight();
-  console.log(wh);
+  //console.log(wh);
 
   if (fromTop > $('#projects').offset().top - wh * 3 / 4) {
     $('.projects__header').addClass('onScrollShow bounceInLeft');

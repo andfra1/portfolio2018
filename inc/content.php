@@ -5,7 +5,7 @@ $pageTitle = 'Franciszek Andruszkiewicz - portfolio';
 $pageTitle_fb = $pageTitle;
 $pageDescription = 'Portfolio';
 $pageDescription_fb = $pageDescription;
-$pageBasicColor = '#000';
+$pageBasicColor = '#fff';
 //meta end
 
 $header = [
